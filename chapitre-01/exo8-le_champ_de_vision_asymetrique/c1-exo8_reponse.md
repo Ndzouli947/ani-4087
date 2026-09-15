@@ -1,5 +1,3 @@
-# Exercice 2 — Champ de vision d'un casque
-
 ## Objectif
 
 Chercher les quatre angles du champ de vision d'un casque du commerce, pour l'œil gauche, puis expliquer ce qui se passerait si l'on employait à la place un champ symétrique de même surface.
