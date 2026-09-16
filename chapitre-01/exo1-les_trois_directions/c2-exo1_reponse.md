@@ -50,7 +50,7 @@ Droite()
 Direction horizontale droite
 
 Chaque vecteur est unitaire, car sa norme vaut 1.
-
+```
 #include <iostream>
 #include <iomanip>
 #include <cmath>
