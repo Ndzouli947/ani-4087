@@ -104,7 +104,7 @@ int main()
 
     return 0;
 }
-
+```
 Explication du résultat
 
 Soit un point :
