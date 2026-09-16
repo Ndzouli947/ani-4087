@@ -1,3 +1,5 @@
+# Exercice 6 — Perception du retard de la souris
+
 ## Objectif
 
 Écrire un programme sur un écran ordinaire qui affiche un objet suivant les mouvements de la souris avec un retard réglable entre 0 et 200 millisecondes.

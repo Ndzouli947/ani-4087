@@ -15,10 +15,8 @@ On peut le représenter par une barre divisée en cinq étapes :
 ```text
 0 ms                                                        20 ms
 |-------------------------------------------------------------|
-| Acquisition | Traitement | Calcul | Rendu | Affichage
-    |2 ms            3 ms      4 ms   7 ms    4 ms
+| Acquisition | Traitement | Calcul | Rendu | Affichage       |
 |-------------|------------|--------|-------|-----------------|
-
 
 Les cinq étapes
 1. Acquisition des données
@@ -45,7 +43,7 @@ la filtration des mouvements ;
 
 la vérification des données ;
 
-la préparation des informations destinées au moteur graphique
+la préparation des informations destinées au moteur graphique.
 
 3. Calcul
 
@@ -79,13 +77,42 @@ les textures ;
 
 les ombres ;
 
-la perspective
+la perspective.
 
-. Affichage
+5. Affichage
 
 L’image calculée est envoyée vers l’écran ou vers les écrans du casque de réalité virtuelle.
 
 Cette étape comprend la transmission et l’actualisation de l’image affichée à l’utilisateur.
+
+Activité réalisée en classe
+
+La classe dispose d’une barre représentant les 20 millisecondes.
+
+Chaque groupe reçoit les cinq étapes :
+
+Acquisition ;
+
+Traitement ;
+
+Calcul ;
+
+Rendu ;
+
+Affichage.
+
+Les étudiants doivent placer chaque étape sur la barre en tenant compte du temps qu’elle peut consommer.
+
+Une proposition de répartition illustrative peut être représentée ainsi :
+
+Budget total : 20 ms
+
+| Acquisition | Traitement | Calcul | Rendu       | Affichage |
+|    2 ms     |    3 ms    |  4 ms  |    7 ms     |   4 ms    |
+|-------------|------------|--------|-------------|-----------|
+0                                                            20 ms
+
+Cette répartition est seulement un exemple. Dans une application réelle, la durée de chaque étape varie selon le matériel, la complexité de la scène et les optimisations du programme.
 
 Ce qui reste pour le code
 
@@ -106,7 +133,9 @@ Il ne reste donc qu’une petite partie du budget pour le code supplémentaire.
 Par exemple, si les quatre premières étapes et l’affichage consomment ensemble 18 ms, il ne reste que :
 
 20 − 18 = 2 ms
+
 Le code doit donc être exécuté dans une durée très courte. Une fonction trop lente, une boucle mal optimisée ou un calcul inutile peut dépasser le budget et provoquer un retard visible.
+
 Réactions de la classe
 
 Après avoir placé les cinq étapes, la classe peut discuter des questions suivantes :
@@ -124,8 +153,6 @@ Comment réduire le temps d’exécution du code ?
 Pourquoi faut-il optimiser les calculs dans une application de réalité virtuelle ?
 
 Que ressent l’utilisateur lorsque le budget de 20 ms est dépassé ?
-
-Conclusion
 
 La représentation des 20 millisecondes montre que le budget de latence doit être partagé entre plusieurs étapes indispensables.
 
