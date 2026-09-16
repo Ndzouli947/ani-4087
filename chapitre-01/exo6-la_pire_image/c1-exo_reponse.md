@@ -6,7 +6,7 @@ dessine en boucle.
 | Mesure | Résultat |
 |---|---:|
 | Durée de la plus longue image | 14,7 ms |
-| Nombre d'images dépassant 11 ms | 37 |
+| Nombres d'images dépassant 11 ms | 37 |
 
 ## Analyse
 
