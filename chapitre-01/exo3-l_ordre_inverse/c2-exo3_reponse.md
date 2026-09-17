@@ -208,9 +208,11 @@ Cas où les résultats coïncident
 
 Choisissons une pose sans rotation :
 
-1 2 3
-0 0 0 1
-4 5 6
+(1 2 3),
+
+(0 0 0 1),
+
+(4 5 6)
 
 Le quaternion (0, 0, 0, 1) représente l’identité : il ne modifie pas le point.
 
