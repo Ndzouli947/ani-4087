@@ -2,26 +2,25 @@
 
 Une pose est définie par :
 
-\[
+
 Pose = (position, orientation)
-\]
+
 
 L’application d’une pose à un point est :
 
-\[
+
 p_{espace} = R(p) + T
-\]
+
 
 où :
 
-- \(R\) représente la rotation ;
-- \(T\) représente la translation.
+- (R) représente la rotation ;
+- (T) représente la translation.
 
 Pour annuler cette transformation, il faut appliquer la transformation inverse :
 
-\[
-p_{local} = R^{-1}(p_{espace} - T)
-\] 
+p_ = R^{-1}(p_{espace} - T)
+
 
 Le quaternion étant normalisé, l’inverse de sa rotation est donné par son **conjugué**.
 
@@ -29,15 +28,14 @@ Le quaternion étant normalisé, l’inverse de sa rotation est donné par son *
 
 Soit un quaternion :
 
-\[
+
 q = (x,y,z,w)
-\]
+
 
 Son conjugué est :
 
-\[
+
 q^* = (-x,-y,-z,w)
-\]
 
 Le signe des trois composantes vectorielles est inversé, tandis que la composante scalaire w reste inchangée.
 
@@ -45,27 +43,21 @@ Le signe des trois composantes vectorielles est inversé, tandis que la composan
 
 La position inverse est calculée en deux étapes:
 1. on prend la position opposée:
-\[
+
 -T = (-T_x,-T_y,-T_z)
-\]
+
 
 2. on tourne cette positon opposée avec le conjugué:
-\[
+
 T_{inverse} = R^{-1}(-T)
-\]
+
 
 La pose inverse est donc: 
 
-\[
-Pose^{-1} =
-\left(
-R^{-1}(-T),
-R^{-1}
-\right)
-\]
+Pose^-{1} = R^-{1}(-T),R^-{1}
 
 ### code
-```cpp
+```
 #include <iostream>
 #include <iomanip>
 #include <cmath>
