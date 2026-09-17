@@ -19,7 +19,7 @@ les deux propriétés rendent le calcul simple:
 
 ## Code C++
 
-```cpp
+```
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -95,8 +95,8 @@ Mat4 PoseVersMatrice(const Pose& p) {
     return mat;
 }
 
-// --- VERSION 1 : inversion generale par cofacteurs (methode classique,
-// ne sait rien de la structure "pose" de la matrice) ---
+// VERSION 1 : inversion generale par cofacteurs (methode classique,
+// ne sait rien de la structure "pose" de la matrice) 
 Mat4 InversionGenerale(const Mat4& m) {
     const float* a = m.m;
     Mat4 inv{};
@@ -139,7 +139,7 @@ Mat4 InversionGenerale(const Mat4& m) {
     return inv;
 }
 
-// --- VERSION 2 : inverse analytique, conjugue + translation opposee ---
+//  VERSION 2 : inverse analytique, conjugue + translation opposee  
 Pose InverseAnalytique(const Pose& p) {
     Quaternion inv = p.orientation.Conjugue();
     Vec3 t = p.position;
@@ -160,7 +160,7 @@ void ComparerCoefficients(const Mat4& m1, const Mat4& m2) {
 int main() {
     std::cout << std::fixed << std::setprecision(4);
 
-    // --- Cas 1 : pose valide ---
+    //  Cas 1 : pose valide 
     float angle = 3.14159265f / 3.0f; // 60 degres
     Quaternion q{std::cos(angle / 2.0f), 0.0f, std::sin(angle / 2.0f), 0.0f};
     Pose pose{q, {1.0f, 2.0f, 3.0f}};
@@ -171,19 +171,19 @@ int main() {
     Pose inverseAnalytiquePose = InverseAnalytique(pose);
     Mat4 inverseAnalytiqueMat = PoseVersMatrice(inverseAnalytiquePose);
 
-    std::cout << "=== Cas 1 : pose valide ===\n\n";
+    std::cout << " Cas 1 : pose valide \n\n";
     inverseGenerale.Print("Inverse generale");
     std::cout << "\n";
     inverseAnalytiqueMat.Print("Inverse analytique");
     std::cout << "\n";
     ComparerCoefficients(inverseGenerale, inverseAnalytiqueMat);
 
-    // --- Cas 2 : pose degeneree (quaternion nul, signe d'un bug amont) ---
+    // Cas 2 : pose degeneree (quaternion nul, signe d'un bug amont) 
     Quaternion qDegenere{0.0f, 0.0f, 0.0f, 0.0f};
     Pose poseDegeneree{qDegenere, {1.0f, 2.0f, 3.0f}};
     Mat4 matriceDegeneree = PoseVersMatrice(poseDegeneree);
 
-    std::cout << "=== Cas 2 : pose degeneree (quaternion nul) ===\n\n";
+    std::cout << " Cas 2 : pose degeneree (quaternion nul)\n\n";
     matriceDegeneree.Print("Matrice de la pose degeneree");
     std::cout << "\n";
 
