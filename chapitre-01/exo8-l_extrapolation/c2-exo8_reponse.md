@@ -153,17 +153,6 @@ Les valeurs sont lues dans l'ordre suivant :
     dt
 
 
-## Format de l'entrée
-
-Les valeurs sont lues dans l'ordre suivant :
-
-    orientation_w orientation_x orientation_y orientation_z
-    position_x position_y position_z
-    vitesse_lineaire_x vitesse_lineaire_y vitesse_lineaire_z
-    vitesse_angulaire_x vitesse_angulaire_y vitesse_angulaire_z
-    dt
-
-
 ## Exemple d'exécution — cas avec rotation
 
 Entrée : orientation identité, position à l'origine, vitesse linéaire
