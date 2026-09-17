@@ -12,7 +12,7 @@ Le budget total est de :
 
 On peut le représenter par une barre divisée en cinq étapes :
 
-```text
+text
 0 ms                                                        20 ms
 |-------------------------------------------------------------|
 | Acquisition | Traitement | Calcul | Rendu | Affichage       |
