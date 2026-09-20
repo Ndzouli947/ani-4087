@@ -11,18 +11,7 @@ with workspace("MaSalle"):
     targetoses([TargetOS.WINDOWS, TargetOS.ANDROID])
     targetarchs([TargetArch.X86_64, TargetArch.ARM64])
     
-    # Default toolchain (auto-detected)
-    # usetoolchain("host-gcc")
-    
-    # Uncomment to use Unitest testing framework
-    # with unitest() as u:
-    #     u.Precompiled()
-    
-    # Add your projects here
-    # with project("MyApp"):
-    #     consoleapp()
-    #     language("C++")
-    #     files(["src/**.cpp"])
+  
 
     # Project: MaSalle
     with project("MaSalle"):
