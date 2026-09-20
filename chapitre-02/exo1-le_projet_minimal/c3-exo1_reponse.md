@@ -28,10 +28,7 @@ with workspace("MaSalle"):
 -Déclare un projet nommé "MaSalle"
 - Construit une application ave cune fénêtre graphique, sans console noire derrière
 - Langage source c'est le C++ (statndard C++17)
--  Quels fihciers sources inclure dans la compilation du projet:
-src/**.cpp tous les fichiers .cpp du dossier src/ compris ceux qui sont dans les sous-dossiers,
-
-include/**.hpp tous les fichiers d'n tête .hpp du dossier include/ avac descte dasn les sous-dossiers
+- les fichiers générés par Jenga pour ce projet sont placés dans le dossier courant.
 
 
 ### Sorties données par jenga build
