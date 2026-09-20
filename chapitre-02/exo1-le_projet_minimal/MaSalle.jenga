@@ -18,5 +18,5 @@ with workspace("MaSalle"):
         windowedapp()
         language("C++")
         cppdialect("C++17")
-        location("MaSalle")
+        location(".")
         files(["src/**.cpp", "include/**.hpp"])
