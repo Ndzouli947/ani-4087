@@ -36,7 +36,7 @@ include/**.hpp tous les fichiers d'n tête .hpp du dossier include/ avac descte 
 
 ### Sorties données par jenga build
 
-Loading workspace...
+oading workspace...
 
 Configuration: Debug
 Target:        Windows x86_64
@@ -56,9 +56,16 @@ Build Order (1 projects):
 ✓ Built: Build\Bin\Debug-Windows\MaSalle\MaSalle.exe
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✓ Build Successful                                                             Time: 1.74s  │
+│  ✓ Build Successful                                                             Time: 4.29s  │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
+════════════════════════════════════════════════════════════════════════════════
+                                BUILD COMPLETED                                 
+════════════════════════════════════════════════════════════════════════════════
+Projects Built:  1/1
+Time:           4.29s
+Status:         ✓ SUCCESS
+════════════════════════════════════════════════════════════════════════════════
 ════════════════════════════════════════════════════════════════════════════════
                                 BUILD COMPLETED                            
 ════════════════════════════════════════════════════════════════════════════════
