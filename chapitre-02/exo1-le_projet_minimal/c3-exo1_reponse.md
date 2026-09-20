@@ -18,7 +18,7 @@ with workspace("MaSalle"):
         windowedapp()
         language("C++")
         cppdialect("C++17")
-        location("MaSalle")
+        location(".")
         files(["src/**.cpp", "include/**.hpp"])
 
 ```
@@ -28,12 +28,13 @@ with workspace("MaSalle"):
 -Déclare un projet nommé "MaSalle"
 - Construit une application ave cune fénêtre graphique, sans console noire derrière
 - Langage source c'est le C++ (statndard C++17)
-- les fichiers générés par Jenga pour ce projet sont placés dans le dossier courant.
+- src/**.cpp tous les fichiers .cpp du dossiers src/, y compris ceux situés dans les sous-dossiers imbriqués grâce au double astérisque
+- include/**.hpp tout les fichiers d'en-tête .hpp du dossier include/ descende dans les sous-dossiers
 
 
 ### Sorties données par jenga build
 
-oading workspace...
+Loading workspace...
 
 Configuration: Debug
 Target:        Windows x86_64
@@ -63,10 +64,4 @@ Projects Built:  1/1
 Time:           4.29s
 Status:         ✓ SUCCESS
 ════════════════════════════════════════════════════════════════════════════════
-════════════════════════════════════════════════════════════════════════════════
-                                BUILD COMPLETED                            
-════════════════════════════════════════════════════════════════════════════════
-Projects Built:  1/1
-Time:           1.74s
-Status:         ✓ SUCCESS
-════════════════════════════════════════════════════════════════════════════════
+
