@@ -1,5 +1,5 @@
 ### Sortie fournie par la commande jenga info :
-
+```
 =========================== Jenga Workspace: MaSalle ===========================
 
 Location: C:\Users\PC\Documents\ani-4087\chapitre-02\exo1-le_projet_minimal
@@ -29,7 +29,7 @@ Daemon
 ------------------------------------------------------------
 Status: Not running
 
-
+```
 ### Ce que jenga info apprends en plus, non écrit dans le fichier:
 
 - Le chemin réel de reconstruction: location(".") est resolu en C:\Users\PC\Documents\ani-4087\chapitre-02\exo1-le_projet_minimal l'endroit exact où jenga va chercher les sources et écrites les sorties
