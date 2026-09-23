@@ -37,10 +37,10 @@ NKPlatform, NKThreading
 
 | Module | Ce qu'on devine | Ce qui reste incertain |
 |---|---|---|
-| NKRenderer | Rendu graphique de haut niveau | Chevauchement possible avec NKRHI  où s'arrête l'un, où commence l'autre ? |
-| NKSerialization | Sauvegarde/chargement de données structurées | Format exact (JSON, binaire, custom) ? |
-| NKStream | Manipulation de flux de données | Flux réseau, fichier, audio, ou générique ? |
-| NKPlatform | Couche d'abstraction du système d'exploitation | Que couvre-t-elle que NKWindow/NKFileSystem ne couvrent pas déjà ? |
+| NKRenderer | Rendu graphique de haut niveau | Chevauchement possible avec NKRHI  où s'arrête l'un, où commence l'autre  |
+| NKSerialization | Sauvegarde/chargement de données structurées | Format exact (JSON, binaire, custom)  |
+| NKStream | Manipulation de flux de données | Flux réseau, fichier, audio, ou générique ?|
+| NKPlatform | Couche d'abstraction du système d'exploitation | Que couvre-t-elle que NKWindow/NKFileSystem ne couvrent pas déjà  |
 
 ### Groupe 3 aucune idée 
 
