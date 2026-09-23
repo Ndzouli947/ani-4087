@@ -37,17 +37,17 @@ NKPlatform, NKThreading
 
 | Module | Ce qu'on devine | Ce qui reste incertain |
 |---|---|---|
-| NKRenderer | Rendu graphique de haut niveau | Chevauchement possible avec NKRHI — où s'arrête l'un, où commence l'autre ? |
-| NKSerialization | Sauvegarde/chargement de données structurées | Format exact (JSON, binaire, custom) ? |
-| NKStream | Manipulation de flux de données | Flux réseau, fichier, audio, ou générique ? |
-| NKPlatform | Couche d'abstraction du système d'exploitation | Que couvre-t-elle que NKWindow/NKFileSystem ne couvrent pas déjà ? |
+| NKRenderer | Rendu graphique de haut niveau | Chevauchement possible avec NKRHI  où s'arrête l'un, où commence l'autre  |
+| NKSerialization | Sauvegarde/chargement de données structurées | Format exact (JSON, binaire, custom)  |
+| NKStream | Manipulation de flux de données | Flux réseau, fichier, audio, ou générique ?|
+| NKPlatform | Couche d'abstraction du système d'exploitation | Que couvre-t-elle que NKWindow/NKFileSystem ne couvrent pas déjà  |
 
 ### Groupe 3 aucune idée 
 
  |Module | En-tête | Phrase |
  |---|---|---|
- | NKRHI | Kernel/Runtime/NKRHI/src/NKRHI/NkRHI.h | C'est la couche d'abstraction de bas niveau du moteur vers l'API graphique: un en-tête qui regroupe la gestion du contexte, des périphériques |
- | NKSL | Kernel/Runtime/NKSL/src/NKSL/NKSL.h | C'est le compilateur de shaders propre au moteur, qui encapsule **glslang** pour convertir ses shaders vers différentes cibles |
- | NKSPIRVCross | Externals/Libs/NKSPIRVCross/src/spirv_cross/spirv_cross.hpp | C'est une enveloppe autour de **SPIRV-Cross** qui retraduit du bytecode SPIR-V vers d'autres langages de shaders.|
- |NKGLSlang | Externals/Libs/NKGLSlang/glslang/Public/ShaderLang.h | C'est une enveloppe autour de **glslang** qui compile du code **GLSL/HLSL** en bytecode **SPIR-V** |
- | NKGlad | Externals/Libs/NKGlad/include/glad/gl.h | C'est le chargeur de fonction **OpenGL** qui donne accès à l'nesemble des fonctions et constantes de l'API.|
+ | NKRHI | ```Kernel/Runtime/NKRHI/src/NKRHI/NkRHI.h``` | C'est la couche d'abstraction de bas niveau du moteur vers l'API graphique: un en-tête qui regroupe la gestion du contexte, des périphériques |
+ | NKSL | ``Kernel/Runtime/NKSL/src/NKSL/NKSL.h`` | C'est le compilateur de shaders propre au moteur, qui encapsule **glslang** pour convertir ses shaders vers différentes cibles |
+ | NKSPIRVCross | ``Externals/Libs/NKSPIRVCross/src/spirv_cross/spirv_cross.hpp`` | C'est une enveloppe autour de **SPIRV-Cross** qui retraduit du bytecode SPIR-V vers d'autres langages de shaders.|
+ |NKGLSlang | ``Externals/Libs/NKGLSlang/glslang/Public/ShaderLang.h`` | C'est une enveloppe autour de **glslang** qui compile du code **GLSL/HLSL** en bytecode **SPIR-V** |
+ | NKGlad | ``Externals/Libs/NKGlad/include/glad/gl.h`` | C'est le chargeur de fonction **OpenGL** qui donne accès à l'nesemble des fonctions et constantes de l'API.|
