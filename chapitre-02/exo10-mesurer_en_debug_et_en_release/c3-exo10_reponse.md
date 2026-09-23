@@ -1,4 +1,4 @@
-# Exercice 9  Mesure des performances en Debug et Release
+# Exercice 10: Mesure des performances en Debug et Release
 
 ##  Objectif
 
