@@ -1,0 +1,327 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# MaSalle – Jenga Workspace
+
+
+
+from Jenga import *
+
+
+with workspace("MaSalle"):
+
+    # Configurations de compilation
+    configurations([
+        "Debug",
+        "Release"
+    ])
+
+    # Systèmes d'exploitation ciblés
+    targetoses([
+        TargetOS.WINDOWS,
+        TargetOS.ANDROID
+    ])
+
+    # Architectures ciblées
+    targetarchs([
+        TargetArch.X86_64,
+        TargetArch.ARM64
+    ])
+
+
+    with project("MaSalle"):
+
+        # Application avec fenêtre
+        windowedapp()
+
+        # Langage et standard C++
+        language("C++")
+        cppdialect("C++17")
+
+        # Emplacement du projet
+        location(".")
+
+        # Tous les fichiers C++ du dossier src
+        files([
+            "src/**.cpp"
+        ])
+        with filter("system:Android"):
+            defines(["ANDROID"])
+            links(["EGL"])
+        
+
+        # 3. DÉPENDANCES NKENTSEU
+
+        # Les dépendances Nkentseu seront ajoutées
+        # progressivement au cours des différents sprints.
+
+        # Sprint 3 – Fenêtre et événements
+
+        # NkWindow / NKEvent
+        #
+        # TODO:
+        # Ajouter ici les dépendances nécessaires à la
+        # gestion de la fenêtre et des événements.
+
+        # links([
+        #     "NKWindow",
+        #     "NKEvent"
+        # ])
+
+
+        # Sprint 4 – Rendu graphique
+
+        # NKRHI / NKRenderer
+        #
+        # TODO:
+        # Ajouter les bibliothèques nécessaires au rendu.
+
+        # links([
+        #     "NKRHI",
+        #     "NKRenderer"
+        # ])
+
+
+        # Sprint 5 – Ressources multimédias
+
+        # Images, modèles, textes et sons.
+        #
+        # TODO:
+        # Ajouter les fichiers de ressources nécessaires.
+
+        # files([
+        #     "assets/**"
+        # ])
+
+
+        # Sprint 6 – Tête, orientation et vision
+
+        # Orientation de la tête et vision stéréoscopique.
+        #
+        # TODO:
+        # Ajouter les définitions XR nécessaires.
+
+        # defines([
+        #     "..."
+        # ])
+
+
+        # Sprint 7 – Cadence et prédiction
+
+        # Gestion du temps d'affichage, de la cadence
+        # et de la prédiction.
+
+        # TODO:
+        # Ajouter les dépendances nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 8 – Chaînes d'échange
+
+        # Gestion des échanges entre les différentes parties
+        # de l'application.
+
+        # TODO:
+        # Ajouter les dépendances nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 9 – Actions
+
+        # Gestion des actions et interactions utilisateur.
+
+        # TODO:
+        # Ajouter les modules nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 10 – Composition et couches
+
+        # Gestion de la composition et des différentes couches.
+
+        # TODO:
+        # Ajouter les éléments nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 11 – Backend graphique
+
+        # Gestion du backend graphique réel et possibilité
+        # d'utiliser différents backends.
+
+        # TODO:
+        # Ajouter les filtres appropriés.
+
+        # filter("options: ...")
+        # filter("system: ...")
+
+
+        # Sprint 12 – Rendu stéréoscopique
+
+        # Effectuer un rendu pour chacun des yeux.
+
+        # TODO:
+        # Ajouter les configurations nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 13 – Système XR
+
+        # Utilisation du système XR réel.
+
+        # TODO:
+        # Ajouter les dépendances et configurations XR.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 14 – Interface et audio spatial
+
+        # Affichage des panneaux, textes et gestion du son
+        # positionné dans l'espace.
+
+        # TODO:
+        # Ajouter les ressources nécessaires.
+
+        # files([
+        #     "..."
+        # ])
+
+        # TODO:
+        # Ajouter les dépendances audio.
+
+        # links([
+        #     "..."
+        # ])
+
+
+        # Sprint 15 – Présence d'un autre utilisateur
+
+        # Gestion d'un autre utilisateur ou personnage.
+
+        # TODO:
+        # Ajouter les ressources nécessaires.
+
+        # files([
+        #     "..."
+        # ])
+
+        # TODO:
+        # Ajouter les dépendances nécessaires.
+
+        # links([
+        #     "..."
+        # ])
+
+        # Sprint 16 – Construire et livrer
+
+        # Préparation de la construction et de la livraison.
+
+        # TODO:
+        # Ces commandes seront utilisées lorsque le chapitre
+        # correspondant sera abordé.
+
+        # package()
+        # sign()
+        # deploy()
+
+
+        # 4. DEVOIR D'APPROFONDISSEMENT JENGA / C++
+
+        # TODO:
+        # Ajouter ici les configurations demandées
+        # dans le devoir final.
+
+
+        # 5. CONFIGURATION WINDOWS
+        with filter("system:Windows"):
+            defines([
+                "WIN32_LEAN_AND_MEAN",
+                "_UNICODE",
+                "UNICODE"
+            ])
+
+            links([
+                "user32",
+                "gdi32",
+                "opengl32",
+                "dwmapi",
+                "shell32",
+                "advapi32",
+                "d3d11",
+                "d3d12",
+                "dxgi",
+                "dxguid",
+                "d3dcompiler",
+                "uuid",
+                "ole32"
+            ])
+        #  CONFIGURATION LINUX
+        with filter("system:Linux"):
+            defines([
+                "NKENTSEU_FORCE_WINDOWING_XLIB_ONLY"
+            ])
+
+            links([
+                "pthread",
+                "X11",
+                "Xext",
+                "GL"
+            ])
+        
+        # Android
+        with filter("system:Android"):
+            defines([
+                "ANDROID",
+                "NKENTSEU_PLATFORM_ANDROID"
+            ])
+
+            links([
+                "EGL",
+                "GLESv3",
+                "android",
+                "log"
+            ])
+        
+
+        # 7. CONFIGURATION RELEASE
+
+        filter("config:Release")
+
+        # Optimisation pour la vitesse
+        
+
+        # Désactivation des informations de debug
+        defines([
+            "NDEBUG"
+        ])
+
+
+        # CONFIGURATION DEBUG
+    
+        filter("config:Debug")
+
+        # Pas d'optimisation
+        
+
+        # Symboles de débogage activés
+        with filter("config : Debug"):
+            symbols("On")
+
