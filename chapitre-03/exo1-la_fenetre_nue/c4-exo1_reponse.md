@@ -16,7 +16,7 @@ Le programme crée une fenêtre "Fenêtre" avec les dimensions suivantes: **1200
 
 ---
 ### Programme main.cpp :
-``
+```
 #include "NKWindow/NKWindow.h"
 #include "NKWindow/NKMain.h"
 #include "NKEvent/NkEventSystem.h" 
@@ -40,7 +40,7 @@ int nkmain(const NkEntryState& state) {
 
     return 0;
 }
-``
+```
 
 ### Fenetre.jenga:
 
