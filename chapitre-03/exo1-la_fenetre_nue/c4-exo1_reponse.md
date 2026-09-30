@@ -45,9 +45,8 @@ int nkmain(const NkEntryState& state) {
 ### Fenetre.jenga:
 
 
-``
+```
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 from Jenga import *
 
@@ -64,7 +63,7 @@ with workspace("Fenetre"):
         location("Fenetre")
         files(["src/**.cpp", "include/**.hpp"])
         usekit(["NKWindow", "NKEvent"])
-``
+```
 
 J'ai construis ce programme avec la commande`` jenga``  build qui crée ensuite un exécutable ``Build\Bin\Debug-Windows\Fenetre\Fenetre.exe``
 
