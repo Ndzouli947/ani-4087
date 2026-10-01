@@ -55,7 +55,6 @@ int nkmain(const NkEntryState& state) {
 }
 ```
 
-> Remplacer par le code exact qui compile chez moi si une signature diffère (pointeur ou référence sur l'événement, nom de l'accesseur de touche).
 
 ### Ce que fait le programme
 
