@@ -3,7 +3,7 @@
 
 ## Énoncé
 
-> Écrivez deux compteurs. Le premier s'incrémente à chaque image où la touche Espace est tenue, lu par `NkInput.IsKeyDown`. Le second s'incrémente à chaque `NkKeyPressEvent` sur Espace. Appuyez une seconde, relâchez. Rendez les deux nombres et expliquez l'écart.
+ Écrivez deux compteurs. Le premier s'incrémente à chaque image où la touche Espace est tenue, lu par `NkInput.IsKeyDown`. Le second s'incrémente à chaque `NkKeyPressEvent` sur Espace. Appuyez une seconde, relâchez. Rendez les deux nombres et expliquez l'écart.
 
 ---
 
@@ -123,7 +123,6 @@ Windows envoie des répétitions quand une touche est maintenue, et je m'attenda
 
 Je n'ai pas trouvé pourquoi. Le test `!event.IsRepeat()` que j'avais repéré (ligne 925 de `NkEvent.h`) se trouve dans un exemple de documentation en commentaire, « Filtrage avancé » : il montre comment un utilisateur ignore les répétitions dans **son propre** gestionnaire. Ce n'est donc pas du code du moteur et il n'explique pas l'absence de répétitions. Il confirme au contraire que le moteur est censé les livrer aux gestionnaires, qui doivent alors les filtrer eux-mêmes.
 
-La cause reste donc à trouver. Pour trancher, il faudrait compter séparément les événements dont `IsRepeat()` vaut `true` et ceux dont il vaut `false`, ou chercher dans le code du backend Windows comment les répétitions sont transmises.
 ---
 
 ## 4. Ce que j'en retiens
