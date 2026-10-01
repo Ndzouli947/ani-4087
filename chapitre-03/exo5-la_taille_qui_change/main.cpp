@@ -8,7 +8,7 @@ using namespace nkentseu;
 
 int nkmain(const NkEntryState& state) {
     NkWindowConfig config;
-    config.title  = "Exercice 5";
+    config.title  = "Fenêtre";
     config.width  = 1280;
     config.height = 720;
 
