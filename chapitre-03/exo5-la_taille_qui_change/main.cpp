@@ -2,7 +2,7 @@
 
 #include "NKWindow/NKWindow.h"
 #include "NKWindow/NKMain.h"
-#include "NKEvent/NkEventSystem.h"   // même include que celui qui a fonctionné chez vous
+#include "NKEvent/NkEventSystem.h"   
 
 using namespace nkentseu;
 
@@ -32,7 +32,7 @@ int nkmain(const NkEntryState& state) {
             }
         });
 
-    // À VÉRIFIER : les noms des accesseurs de la taille (GetWidth / GetHeight ?).
+    
     auto gardeTaille = NkEvents().AddEventCallbackGuard<NkWindowResizeEvent>(
         [&](NkWindowResizeEvent* e) {
             ++compteur;
