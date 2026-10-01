@@ -9,7 +9,7 @@ Redimensionnez lentement, puis d'un coup. Rendez les deux séries de nombres, et
 
 ### main.cpp
 ```cpp
-uto gardeTaille = NkEvents().AddEventCallbackGuard<NkWindowResizeEvent>(
+auto gardeTaille = NkEvents().AddEventCallbackGuard<NkWindowResizeEvent>(
         [&](NkWindowResizeEvent* e) {
             ++compteur;
             std::printf("#%d : %u x %u\n", compteur,
@@ -22,7 +22,6 @@ uto gardeTaille = NkEvents().AddEventCallbackGuard<NkWindowResizeEvent>(
 ### Redimensionnement lent 
 ---
 J'ai commencé à redimensionner la fenêtre lentement en faisant glisse le bord de la fenêtre et j'ai constaté que plusieurs changements ont apparu dans la console j'ai également observé que la taille changeait et que des événements étaient affichés pendant que je deplaçais le bord de la fenêtre.
-
 
 ### Redimensionnement d'un coup 
 ---
