@@ -21,8 +21,8 @@ int main(){
 
     for (int i = 0; i < n; ++i){
         std::string nom;
-        long long e = 0; // echelle verticale en millième(hauteur en millimètres)
-        long long y = 0; //hauteur du centre en millimètres
+        long long e = 0;  // echelle verticale en millième(hauteur en millimètres)
+        long long y = 0;  //hauteur du centre en millimètres
         std::cin >> nom >> e >> y;
 
         //le cube centré
@@ -62,7 +62,7 @@ int main(){
     }
 
     std::cout << "A CORRIGER " << aCorriger << '\n';
-    std::cout << " PIRE " << pire << '\n';
+    std::cout << "PIRE " << pire << '\n';
 
     return 0;
 }
