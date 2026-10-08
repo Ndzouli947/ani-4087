@@ -18,7 +18,7 @@ int main () {
         // distance entre la camera et la face avant du cube sachant que sz est pair
         const long long faceAvant = distance - sz/ 2;
 
-        // causes testées dans l'ordre 
+        // causes testées dans l'ordre
 
         std::string verdict;
         if ((drapeaux & 2) == 0){
@@ -43,9 +43,8 @@ int main () {
             ++enPanne;
         }
     }
-
-    std::cout << "VISIBLES" << visibles << '\n';
-    std::cout << "EN PANNE" << enPanne << '\n';
+        std::cout << "VISIBLES " << visibles << '\n';
+        std::cout << "EN PANNE " << enPanne << '\n';
 
     return 0;
 }
